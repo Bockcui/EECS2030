@@ -1,5 +1,7 @@
 package eecs2030.lab3;
 
+import java.util.Arrays;
+
 /**
  * An immutable class implementing a 3D vector 
  * @author Andriy
@@ -30,8 +32,11 @@ public class Vector3 implements Comparable <Vector3>{
 	public Vector3(double[] v) {
 		//TODO
 		//consider how to ensure the objects are immutable
-		this(v[0], v[1], v[2]);
-		if(v.length != 3)
+		if(v.length == 3)
+		{
+			vector = Arrays.copyOf(v, 3);
+		}
+		else
 		{
 			throw new IllegalArgumentException();
 		}
@@ -45,7 +50,7 @@ public class Vector3 implements Comparable <Vector3>{
 	public Vector3(Vector3 old) {
 		//TODO
 		//consider how to ensure the objects are immutable
-		this(old.vector[0], old.vector[1], old.vector[2]);
+		this.vector = old.vector;
 	}
 
 	/**
@@ -79,7 +84,7 @@ public class Vector3 implements Comparable <Vector3>{
 	@Override
 	public int hashCode() {
 		//TODO
-		return vector.hashCode();
+		return this.vector.hashCode();
 	}
 
 	@Override
@@ -92,11 +97,14 @@ public class Vector3 implements Comparable <Vector3>{
 		else if(obj.getClass() == Vector3.class)
 		{
 			Vector3 other = (Vector3) obj;
-			if(this.getElements() == other.getElements())
+			for(int i = 0; i < 3; i++)
 			{
-				return true;
+				if(this.getElement(i) != other.getElement(i))
+				{
+					return false;
+				}
 			}
-			return false;
+			return true;
 		}
 		else
 		{
