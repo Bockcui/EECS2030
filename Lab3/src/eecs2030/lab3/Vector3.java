@@ -11,7 +11,8 @@ import java.util.Arrays;
 public class Vector3 implements Comparable <Vector3>{
 	//TODO
 	//consider how to ensure the objects are immutable
-	final double[] vector;
+	final double x, y, z;
+	private final double[] vector;
 
 	/**
 	 * Creates a 3D vector from 3 numeric scalar components
@@ -21,7 +22,10 @@ public class Vector3 implements Comparable <Vector3>{
 	 */
 	public Vector3(double x, double y, double z) {
 		//TODO
-		vector = new double[]{x,y,z};
+		this.x = x;
+		this.y = y;
+		this.z = z;
+		this.vector = new double[]{this.x, this.y, this.z};
 	}
 
 	/**
@@ -34,7 +38,10 @@ public class Vector3 implements Comparable <Vector3>{
 		//consider how to ensure the objects are immutable
 		if(v.length == 3)
 		{
-			vector = Arrays.copyOf(v, 3);
+			this.x = v[0];
+			this.y = v[1];
+			this.z = v[2];
+			this.vector = new double[] {this.x, this.y, this.z};
 		}
 		else
 		{
@@ -50,6 +57,9 @@ public class Vector3 implements Comparable <Vector3>{
 	public Vector3(Vector3 old) {
 		//TODO
 		//consider how to ensure the objects are immutable
+		this.x = old.x;
+		this.y = old.y;
+		this.z = old.z;
 		this.vector = old.vector;
 	}
 
@@ -78,7 +88,7 @@ public class Vector3 implements Comparable <Vector3>{
 	public double[] getElements (){
 		//TODO
 		//consider how to ensure the objects are immutable
-		return Arrays.copyOf(vector, 3);
+		return new double[] {this.x, this.y, this.z};
 	}
 
 	@Override

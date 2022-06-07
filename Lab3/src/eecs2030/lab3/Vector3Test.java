@@ -42,10 +42,6 @@ public class Vector3Test {
 		String error = String.format("Vector3 hashCode() failed");
 		assertFalse(error, vector1 == vector2);
 		assertTrue(error, vector1.equals(vector2));
-		System.out.println(vector1.hashCode());
-		System.out.println(vector1.getElements());
-		System.out.println(vector2.hashCode());
-		System.out.println(vector2.getElements());
 		assertTrue(error, vector1.hashCode() == vector2.hashCode());
 	}
 
