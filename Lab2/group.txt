@@ -1,0 +1,17 @@
+Group Member 1
+First Name: Cheng Tian
+Last Name: Cui
+Student No.: 218082305
+E-mail: cttcui@my.yorku.ca
+
+Group Member 2
+First Name: Yuxuan
+Last Name: Liu
+Student No.: 217910878
+E-mail: med1vh@my.yorku.ca
+
+Group Member 3
+First Name: Chenxi
+Last Name: Liu
+Student No.: 218665075
+E-mail: w1nfred@my.yorku.ca
