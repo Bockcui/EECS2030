@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class Vector3 implements Comparable <Vector3>{
 	//TODO
 	//consider how to ensure the objects are immutable
-	final double x, y, z;
+	private final double x, y, z;
 	private final double[] vector;
 
 	/**
@@ -88,7 +88,7 @@ public class Vector3 implements Comparable <Vector3>{
 	public double[] getElements (){
 		//TODO
 		//consider how to ensure the objects are immutable
-		return new double[] {this.x, this.y, this.z};
+		return Arrays.copyOf(vector, 3);
 	}
 
 	@Override
@@ -122,16 +122,11 @@ public class Vector3 implements Comparable <Vector3>{
 	@Override
 	public int compareTo(Vector3 o) {
 		//TODO
-		double mag1, mag2, x1, x2, y1, y2, z1, z2;
-		x1 = this.getElement(0);
-		y1 = this.getElement(1);
-		z1 = this.getElement(2);
-		mag1 = Math.sqrt(x1 * x1 + y1 * y1 + z1 * z1);
-		
-		x2 = o.getElement(0);
-		y2 = o.getElement(1);
-		z2 = o.getElement(2);
-		mag2 = Math.sqrt(x2 * x2 + y2 * y2 + z2 * z2);
+		double mag1 = Math.sqrt(x*x + y*y + z*z),
+			   ox = o.getElement(0),
+			   oy = o.getElement(1),
+			   oz = o.getElement(2),
+			   mag2 = Math.sqrt(ox*ox + oy*oy + oz*oz);
 		
 		if(mag1 > mag2)
 		{
