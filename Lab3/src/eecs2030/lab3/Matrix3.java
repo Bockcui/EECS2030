@@ -1,5 +1,7 @@
 package eecs2030.lab3;
 
+import java.util.ArrayList;
+
 /**
  * An immutable class implementing a 3x3 matrix 
  * @author Andriy
@@ -8,7 +10,13 @@ package eecs2030.lab3;
 public class Matrix3 {
 	//TODO
 	//consider how to ensure the objects are immutable
+	private static final int row = 3;
+	private static final int column = 3;
+	private double[][] array1;
 	
+	private Matrix3() {
+		this.array1 = new double[row][column];
+	}
 	/**
 	 * Creates a 3x3 matrix from an 2D array
 	 * @param array array containing the elements of the desired matrix
@@ -17,6 +25,7 @@ public class Matrix3 {
 	public Matrix3(double[][] array) {
 		//TODO
 		//HERE, consider how to ensure the objects are immutable
+		this.array1 = array;
 	}
 	
 	/**
@@ -27,6 +36,7 @@ public class Matrix3 {
 	public Matrix3(Matrix3 old) {
 		//TODO
 		//consider how to ensure the objects are immutable
+		final Matrix3 oldMatrix = old;
 	}
 
 	/**
@@ -38,7 +48,7 @@ public class Matrix3 {
 	 */
 	public double getElement (int row, int column){
 		//TODO
-		return 0d;
+		return this.array1[row][column];
 	}
 	
 	/**
@@ -48,7 +58,7 @@ public class Matrix3 {
 	public double[][] getElements (){
 		//TODO
 		//HERE, consider how to ensure the objects are immutable
-		return null;
+		return this.array1;
 	}
 
 }
