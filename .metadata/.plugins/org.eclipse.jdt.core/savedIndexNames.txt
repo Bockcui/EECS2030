@@ -1,8 +1,0 @@
-INDEX VERSION 1.131+C:\Users\Winfr\Documents\Study\York\1st year\Summer\EECS 2030\Github\YorkU-S2022-LE-EECS2031\.metadata\.plugins\org.eclipse.jdt.core
-1259207542.index
-75931715.index
-1007340512.index
-870729040.index
-2768476762.index
-1175996124.index
-1865797976.index
