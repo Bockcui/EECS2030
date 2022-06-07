@@ -23,6 +23,7 @@
 hs_err_pid*
 
 .metadata
+.metadata/*
 bin/
 tmp/
 *.tmp
