@@ -78,13 +78,13 @@ public class Vector3 implements Comparable <Vector3>{
 	public double[] getElements (){
 		//TODO
 		//consider how to ensure the objects are immutable
-		return new double[]{this.getElement(0), this.getElement(1), this.getElement(2)};
+		return Arrays.copyOf(vector, 3);
 	}
 
 	@Override
 	public int hashCode() {
 		//TODO
-		return this.vector.hashCode();
+		return Arrays.hashCode(vector);
 	}
 
 	@Override
@@ -97,14 +97,7 @@ public class Vector3 implements Comparable <Vector3>{
 		else if(obj.getClass() == Vector3.class)
 		{
 			Vector3 other = (Vector3) obj;
-			for(int i = 0; i < 3; i++)
-			{
-				if(this.getElement(i) != other.getElement(i))
-				{
-					return false;
-				}
-			}
-			return true;
+			return Arrays.equals(this.vector, other.vector);
 		}
 		else
 		{
