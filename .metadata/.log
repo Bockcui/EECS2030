@@ -8694,6 +8694,7 @@ java.lang.IllegalStateException: Registry Directory not available: c:\Program Fi
 	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:266)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 
 !ENTRY org.eclipse.jdt.core 4 4 2022-06-07 12:40:55.786
@@ -8884,6 +8885,8 @@ java.lang.IllegalStateException: Registry Directory not available: c:\Program Fi
 	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.watchDropins(Activator.java:515)
 	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start(Activator.java:175)
 =======
+=======
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 !SESSION 2022-06-07 11:52:00.626 -----------------------------------------------
 eclipse.buildId=4.23.0.I20220308-0310
 java.version=17.0.1
@@ -8955,6 +8958,9 @@ java.lang.Exception: The project description file (.project) for '.org.eclipse.e
 	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2482)
 	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2233)
 	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:475)
+<<<<<<< HEAD
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
+=======
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:813)
 	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
@@ -8965,6 +8971,7 @@ java.lang.Exception: The project description file (.project) for '.org.eclipse.e
 	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:371)
 	at org.eclipse.osgi.container.Module.doStart(Module.java:605)
 	at org.eclipse.osgi.container.Module.start(Module.java:468)
+<<<<<<< HEAD
 <<<<<<< HEAD
 	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1847)
 	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
@@ -8980,6 +8987,8 @@ java.lang.Exception: The project description file (.project) for '.org.eclipse.e
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2022-06-07 11:55:20.389
 =======
+=======
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:513)
 	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
 	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:570)
@@ -9008,6 +9017,9 @@ java.lang.Exception: The project description file (.project) for '.org.eclipse.e
 !ENTRY org.eclipse.jface 2 0 2022-06-07 11:52:03.570
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2022-06-07 11:52:03.570
+<<<<<<< HEAD
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
+=======
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
@@ -9015,7 +9027,11 @@ Binding(CTRL+SHIFT+T,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@570ed9c,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d622556,
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 =======
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d622556,
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
@@ -9027,17 +9043,23 @@ Binding(CTRL+SHIFT+T,
 		,
 		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@93f15f6,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 !SUBENTRY 1 org.eclipse.jface 2 0 2022-06-07 11:55:20.389
 =======
+=======
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b9f7edc,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 !SUBENTRY 1 org.eclipse.jface 2 0 2022-06-07 11:52:03.570
+<<<<<<< HEAD
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
+=======
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 !MESSAGE A conflict occurred for ALT+SHIFT+R:
 Binding(ALT+SHIFT+R,
@@ -9045,7 +9067,11 @@ Binding(ALT+SHIFT+R,
 		Rename the selected element,
 		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5034681f,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70ee1963,
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 =======
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70ee1963,
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
@@ -9057,7 +9083,11 @@ Binding(ALT+SHIFT+R,
 		Rename the selected item,
 		Category(org.eclipse.ui.category.file,File,null,true),
 <<<<<<< HEAD
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1dfe5dd1,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e0652ab,
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 =======
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e0652ab,
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
@@ -9065,6 +9095,7 @@ Binding(ALT+SHIFT+R,
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2022-06-07 11:55:27.970
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
@@ -9074,10 +9105,16 @@ user global configuration and to define the default location to store repositori
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Winfr'. If this is
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2022-06-07 11:52:07.168
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Winfr'. If this is
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.oomph.setup.ui 4 0 2022-06-07 11:55:38.435
 !MESSAGE Registry Directory not available: c:\Program Files\eclipse\java-2022-03\eclipse\p2\org.eclipse.equinox.p2.engine\profileRegistry.
@@ -9111,6 +9148,8 @@ java.lang.IllegalStateException: Registry Directory not available: c:\Program Fi
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 !ENTRY org.eclipse.jdt.core 4 4 2022-06-07 11:52:07.475
 !MESSAGE Exception while reading last build state for: P/Lab1
 !STACK 1
@@ -9455,4 +9494,7 @@ java.lang.IllegalArgumentException: Invalid identifier : >double[][]<
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+<<<<<<< HEAD
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
+=======
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
