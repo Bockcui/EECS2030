@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
@@ -23,6 +24,8 @@ INDEX VERSION 1.131+C:\Users\cttcu\Documents\GitHub\YorkU-S2022-LE-EECS2031\.met
 >>>>>>> Stashed changes
 =======
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
+=======
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 INDEX VERSION 1.131+C:\Users\Winfr\Documents\Study\York\1st year\Summer\EECS 2030\Github\YorkU-S2022-LE-EECS2031\.metadata\.plugins\org.eclipse.jdt.core
 1259207542.index
 75931715.index
@@ -32,6 +35,7 @@ INDEX VERSION 1.131+C:\Users\Winfr\Documents\Study\York\1st year\Summer\EECS 203
 1175996124.index
 1865797976.index
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
@@ -40,5 +44,7 @@ INDEX VERSION 1.131+C:\Users\Winfr\Documents\Study\York\1st year\Summer\EECS 203
 =======
 >>>>>>> edee7ca4c1b39463d3c776c05d94d8b8adfe03dc
 >>>>>>> Stashed changes
+=======
+>>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
 =======
 >>>>>>> 7cc7483f5fda35e8bf07170bd629e2bf0a91bf26
