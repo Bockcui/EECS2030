@@ -1,7 +1,5 @@
 package eecs2030.lab3;
 
-import java.util.ArrayList;
-
 /**
  * An immutable class implementing a 3x3 matrix 
  * @author Andriy
@@ -10,13 +8,18 @@ import java.util.ArrayList;
 public class Matrix3 {
 	//TODO
 	//consider how to ensure the objects are immutable
-	private static final int row = 3;
-	private static final int column = 3;
-	private double[][] array1;
+	final double a00, a01, a02,
+				 a10, a11, a12,
+				 a20, a21, a22;
+	final double[][] a;
 	
+	/*
 	private Matrix3() {
-		this.array1 = new double[row][column];
+		a00 = a01 = a02 = a10 = a11 = a12 = a20 = a21 = a22 = 0;
+		a = new double[][] {{a00, a01, a02}, {a10, a11, a12}, {a20, a21, a22}};
 	}
+	*/
+	
 	/**
 	 * Creates a 3x3 matrix from an 2D array
 	 * @param array array containing the elements of the desired matrix
@@ -25,7 +28,31 @@ public class Matrix3 {
 	public Matrix3(double[][] array) {
 		//TODO
 		//HERE, consider how to ensure the objects are immutable
-		this.array1 = array;
+		if(array.length != 3)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			for(int i = 0; i < 3; i++)
+			{
+				if(array[i].length != 3)
+				{
+					throw new IllegalArgumentException();
+				}
+			}
+		}
+		
+		a00 = array[0][0];
+		a01 = array[0][1];
+		a02 = array[0][2];
+		a10 = array[1][0];
+		a11 = array[1][1];
+		a12 = array[1][2];
+		a20 = array[2][0];
+		a21 = array[2][1];
+		a22 = array[2][2];
+		a = new double[][] {{a00, a01, a02}, {a10, a11, a12}, {a20, a21, a22}};
 	}
 	
 	/**
@@ -36,7 +63,16 @@ public class Matrix3 {
 	public Matrix3(Matrix3 old) {
 		//TODO
 		//consider how to ensure the objects are immutable
-		final Matrix3 oldMatrix = old;
+		this.a00 = old.a00;
+		this.a01 = old.a01;
+		this.a02 = old.a02;
+		this.a10 = old.a10;
+		this.a11 = old.a11;
+		this.a12 = old.a12;
+		this.a20 = old.a20;
+		this.a21 = old.a21;
+		this.a22 = old.a22;
+		this.a = old.a;
 	}
 
 	/**
@@ -48,7 +84,7 @@ public class Matrix3 {
 	 */
 	public double getElement (int row, int column){
 		//TODO
-		return this.array1[row][column];
+		return this.a[row][column];
 	}
 	
 	/**
@@ -58,7 +94,7 @@ public class Matrix3 {
 	public double[][] getElements (){
 		//TODO
 		//HERE, consider how to ensure the objects are immutable
-		return this.array1;
+		return new double[][] {{a00, a01, a02}, {a10, a11, a12}, {a20, a21, a22}};
 	}
 
 }
