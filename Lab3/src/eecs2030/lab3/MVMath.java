@@ -9,6 +9,9 @@ public class MVMath {
 	//TODO
 	//ensure this class is a utility class and no objects are ever created
 	
+	//Empty private constructor
+	private MVMath(){}
+	
 	/**
 	 * Multiplies a matrix by a vector
 	 * @param m matrix
@@ -18,7 +21,11 @@ public class MVMath {
 	 */
 	public static Vector3 multiply (Matrix3 m, Vector3 v){
 		//TODO
-		return null;
+		double x = m.getElement(0, 0) * v.getElement(0) + m.getElement(0, 1) * v.getElement(1) + m.getElement(0, 2) * v.getElement(2),
+			   y = m.getElement(1, 0) * v.getElement(0) + m.getElement(1, 1) * v.getElement(1) + m.getElement(1, 2) * v.getElement(2),
+			   z = m.getElement(2, 0) * v.getElement(0) + m.getElement(2, 1) * v.getElement(1) + m.getElement(2, 2) * v.getElement(2);
+		
+		return new Vector3(x, y, z);
 	}
 
 	/**
@@ -29,7 +36,19 @@ public class MVMath {
 	 */
 	public static Matrix3 multiply (Matrix3 m1, Matrix3 m2){
 		//TODO
-	    return null;
+		double[][] m3 = new double[3][3];
+		
+		for(int y = 0; y < 3; y++)
+		{
+			for(int x = 0; x < 3; x++)
+			{
+				m3[y][x] = m1.getElement(y, 0) * m2.getElement(0, x)
+						 + m1.getElement(y, 1) * m2.getElement(1, x)
+						 + m1.getElement(y, 2) * m2.getElement(2, x);
+			}
+		}
+		
+	    return new Matrix3(m3);
 	}
 	
 	/**
@@ -41,7 +60,11 @@ public class MVMath {
 	 */
 	public static Vector3 crossProduct (Vector3 v1, Vector3 v2){
 		//TODO
-		return null;
+		double x = v1.getElement(1) * v2.getElement(2) - v1.getElement(2) * v2.getElement(1),
+			   y = -1.0 * (v1.getElement(0) * v2.getElement(2) - v1.getElement(2) * v2.getElement(0)),
+			   z = v1.getElement(0) * v2.getElement(1) - v1.getElement(1) * v2.getElement(0);
+		
+		return new Vector3(x, y, z);
 	}
 
 	/**
@@ -53,7 +76,7 @@ public class MVMath {
 	 */
 	public static double dotProduct (Vector3 v1, Vector3 v2){
 		//TODO
-		return 0.0;
+		return v1.getElement(0) * v2.getElement(0) + v1.getElement(1) * v2.getElement(1) + v1.getElement(2) * v2.getElement(2);
 	}
 
 }
