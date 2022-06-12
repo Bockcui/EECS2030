@@ -9,9 +9,10 @@ import java.util.Arrays;
  *
  */
 public class Vector3 implements Comparable <Vector3>{
-	//TODO
-	//consider how to ensure the objects are immutable
+	//Make all elements of array write once
 	private final double x, y, z;
+	
+	//Make references array write once
 	private final double[] vector;
 
 	/**
@@ -21,10 +22,12 @@ public class Vector3 implements Comparable <Vector3>{
 	 * @param z z coordinate
 	 */
 	public Vector3(double x, double y, double z) {
-		//TODO
+		//Assign inputs to elements
 		this.x = x;
 		this.y = y;
 		this.z = z;
+		
+		//Create array with immutable variables
 		this.vector = new double[]{this.x, this.y, this.z};
 	}
 
@@ -34,13 +37,15 @@ public class Vector3 implements Comparable <Vector3>{
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public Vector3(double[] v) {
-		//TODO
-		//consider how to ensure the objects are immutable
+		//Check dimensions
 		if(v.length == 3)
 		{
+			//Copy array elements into vector elements
 			this.x = v[0];
 			this.y = v[1];
 			this.z = v[2];
+			
+			//Create array holding references to immutable fields
 			this.vector = new double[] {this.x, this.y, this.z};
 		}
 		else
@@ -55,8 +60,7 @@ public class Vector3 implements Comparable <Vector3>{
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public Vector3(Vector3 old) {
-		//TODO
-		//consider how to ensure the objects are immutable
+		//Copy fields from old Vector3 to new Vector3
 		this.x = old.x;
 		this.y = old.y;
 		this.z = old.z;
@@ -70,14 +74,14 @@ public class Vector3 implements Comparable <Vector3>{
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public double getElement (int index){
-		//TODO
-		if(index < 0 || index > 2)
+		//Check index if it is within bounds
+		if(index >= 0 && index < 3)
 		{
-			throw new IllegalArgumentException();
+			return vector[index];
 		}
 		else
 		{
-			return vector[index];
+			throw new IllegalArgumentException();
 		}
 	}
 
@@ -86,26 +90,27 @@ public class Vector3 implements Comparable <Vector3>{
 	 * @return vector components, first element at index [0], and so on
 	 */
 	public double[] getElements (){
-		//TODO
-		//consider how to ensure the objects are immutable
-		return Arrays.copyOf(vector, 3);
+		//Return a copy of the vector array
+		return new double[] {this.x, this.y, this.z};
 	}
 
 	@Override
 	public int hashCode() {
-		//TODO
+		//Return hashcode using standard 1D array definition
 		return Arrays.hashCode(vector);
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		//TODO
+		//Check if object is null
 		if(obj == null)
 		{
 			return false;
 		}
+		//Check if object type is the same
 		else if(obj.getClass() == Vector3.class)
 		{
+			//Check if vector arrays are equal using standard Arrays object comparison
 			Vector3 other = (Vector3) obj;
 			return Arrays.equals(this.vector, other.vector);
 		}
@@ -121,13 +126,14 @@ public class Vector3 implements Comparable <Vector3>{
 	 */
 	@Override
 	public int compareTo(Vector3 o) {
-		//TODO
+		//Declare and initialize calculation variables
 		double mag1 = Math.sqrt(x*x + y*y + z*z),
 			   ox = o.getElement(0),
 			   oy = o.getElement(1),
 			   oz = o.getElement(2),
 			   mag2 = Math.sqrt(ox*ox + oy*oy + oz*oz);
 		
+		//Return based on comparison
 		if(mag1 > mag2)
 		{
 			return 1;

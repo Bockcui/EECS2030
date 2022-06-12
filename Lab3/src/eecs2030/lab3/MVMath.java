@@ -20,11 +20,12 @@ public class MVMath {
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public static Vector3 multiply (Matrix3 m, Vector3 v){
-		//TODO
+		//Standard matrix vector multiplication between 3x3 matrix and 3x1 vector
 		double x = m.getElement(0, 0) * v.getElement(0) + m.getElement(0, 1) * v.getElement(1) + m.getElement(0, 2) * v.getElement(2),
 			   y = m.getElement(1, 0) * v.getElement(0) + m.getElement(1, 1) * v.getElement(1) + m.getElement(1, 2) * v.getElement(2),
 			   z = m.getElement(2, 0) * v.getElement(0) + m.getElement(2, 1) * v.getElement(1) + m.getElement(2, 2) * v.getElement(2);
 		
+		//Create a new Vector3 object and return it
 		return new Vector3(x, y, z);
 	}
 
@@ -35,9 +36,10 @@ public class MVMath {
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public static Matrix3 multiply (Matrix3 m1, Matrix3 m2){
-		//TODO
+		//Declare result array
 		double[][] m3 = new double[3][3];
 		
+		//Standard matrix multiplication between 3x3 matrices
 		for(int y = 0; y < 3; y++)
 		{
 			for(int x = 0; x < 3; x++)
@@ -48,6 +50,7 @@ public class MVMath {
 			}
 		}
 		
+		//Create new Matrix3 object and return it
 	    return new Matrix3(m3);
 	}
 	
@@ -59,11 +62,12 @@ public class MVMath {
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public static Vector3 crossProduct (Vector3 v1, Vector3 v2){
-		//TODO
+		//Cross product between two vectors
 		double x = v1.getElement(1) * v2.getElement(2) - v1.getElement(2) * v2.getElement(1),
 			   y = -1.0 * (v1.getElement(0) * v2.getElement(2) - v1.getElement(2) * v2.getElement(0)),
 			   z = v1.getElement(0) * v2.getElement(1) - v1.getElement(1) * v2.getElement(0);
 		
+		//Create new Vector3 and return it
 		return new Vector3(x, y, z);
 	}
 
@@ -75,7 +79,7 @@ public class MVMath {
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public static double dotProduct (Vector3 v1, Vector3 v2){
-		//TODO
+		//Calculate dot product and return
 		return v1.getElement(0) * v2.getElement(0) + v1.getElement(1) * v2.getElement(1) + v1.getElement(2) * v2.getElement(2);
 	}
 

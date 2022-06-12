@@ -6,19 +6,13 @@ package eecs2030.lab3;
  * EECS 2030 Lab 3 SU2022
  */
 public class Matrix3 {
-	//TODO
-	//consider how to ensure the objects are immutable
-	final double a00, a01, a02,
+	//Make all elements of array write once
+	private final double a00, a01, a02,
 				 a10, a11, a12,
 				 a20, a21, a22;
-	final double[][] a;
 	
-	/*
-	private Matrix3() {
-		a00 = a01 = a02 = a10 = a11 = a12 = a20 = a21 = a22 = 0;
-		a = new double[][] {{a00, a01, a02}, {a10, a11, a12}, {a20, a21, a22}};
-	}
-	*/
+	//Make references array reference write once
+	private final double[][] a;
 	
 	/**
 	 * Creates a 3x3 matrix from an 2D array
@@ -26,8 +20,7 @@ public class Matrix3 {
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public Matrix3(double[][] array) {
-		//TODO
-		//HERE, consider how to ensure the objects are immutable
+		//Check input dimensions
 		if(array.length != 3)
 		{
 			throw new IllegalArgumentException();
@@ -43,6 +36,7 @@ public class Matrix3 {
 			}
 		}
 		
+		//Assign array elements to corresponding matrix elements
 		a00 = array[0][0];
 		a01 = array[0][1];
 		a02 = array[0][2];
@@ -52,6 +46,8 @@ public class Matrix3 {
 		a20 = array[2][0];
 		a21 = array[2][1];
 		a22 = array[2][2];
+		
+		//Assign matrix constants.
 		a = new double[][] {{a00, a01, a02}, {a10, a11, a12}, {a20, a21, a22}};
 	}
 	
@@ -61,8 +57,7 @@ public class Matrix3 {
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public Matrix3(Matrix3 old) {
-		//TODO
-		//consider how to ensure the objects are immutable
+		//Copy over all values and references
 		this.a00 = old.a00;
 		this.a01 = old.a01;
 		this.a02 = old.a02;
@@ -83,8 +78,15 @@ public class Matrix3 {
 	 * TODO HERE, determine and specify the preconditions, and take an appropriate action
 	 */
 	public double getElement (int row, int column){
-		//TODO
-		return this.a[row][column];
+		//Check if indices given are in bounds
+		if(row >= 0 && row < 3 && column >=0 && column < 3)
+		{
+			return this.a[row][column];
+		}
+		else
+		{
+			throw new IllegalArgumentException();
+		}
 	}
 	
 	/**
@@ -92,8 +94,7 @@ public class Matrix3 {
 	 * @return 2D array containing 9 matrix elements
 	 */
 	public double[][] getElements (){
-		//TODO
-		//HERE, consider how to ensure the objects are immutable
+		//Return a copy of the matrix array, not the reference to matrix array
 		return new double[][] {{a00, a01, a02}, {a10, a11, a12}, {a20, a21, a22}};
 	}
 
