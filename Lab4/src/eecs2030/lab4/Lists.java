@@ -13,40 +13,40 @@ public class Lists {
 
 	public static <T extends Comparable <? super T>> void selectionSortRecursive(List <T> list){
 		//TODO implement the recursive solution
-		List<T> copyList = List.copyOf(list);
-		if (copyList.size() < 1) {
+		
+		if (list.size() < 1) {
 			return;
 		}
 		
-		T min = copyList.get(0);
-		for(int j = 0; j< copyList.size(); j++) {
-			T temp = copyList.get(j);
+		T min = list.get(0);
+		for(int j = 0; j< list.size(); j++) {
+			T temp = list.get(j);
 			if(temp.compareTo(min) < 0) {
 				min = temp;
 			}
 		}
 
-		copyList.remove(min);
-		copyList.add(0, min);
+		list.remove(min);
+		list.add(0, min);
 		
-		Lists.selectionSortRecursive(copyList.subList(1, copyList.size()));
+		Lists.selectionSortRecursive(list.subList(1, list.size()));
 	}
 	
 	public static <T extends Comparable <? super T>> void selectionSortIterative(List <T> list){
 		//TODO implement the Iterative solution
-		List<T> copyList = List.copyOf(list);
-		for(int i = 0; i< copyList.size(); i++) {
+		
+		for(int i = 0; i< list.size(); i++) {
 			int k = i;
-			for(int j = k + 1; j< copyList.size(); j++) {
-				if(copyList.get(j).compareTo(copyList.get(k)) < 0) {
+			for(int j = k + 1; j< list.size(); j++) {
+				if(list.get(j).compareTo(list.get(k)) < 0) {
 					k = j;
 				}
 			}
 			
 			if (i != k) {
-				T temp = copyList.get(i);
-				copyList.set(i,copyList.get(k));
-				copyList.set(k, temp);
+				T temp = list.get(i);
+				list.set(i,list.get(k));
+				list.set(k, temp);
 			}
 		}
 	}
