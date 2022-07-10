@@ -19,14 +19,14 @@ public class sortExperiment {
 			end = System.nanoTime();
 			System.out.println("N=" + i + "\nDefault Sort, Time spent: " + (end - start)/1e6 + " ms");
 			
-			start = System.nanoTime();
-			Lists.selectionSortRecursive(list);
-			end = System.nanoTime();
+			start = System.nanoTime(); // 记录初始时间
+			Lists.selectionSortRecursive(list); // 跑一下List.java里面的selectionSortRecursive
+			end = System.nanoTime();  // 记录结束时间
 			System.out.println("Selection-Recursive, Time spent: " + (end - start)/1e6 + " ms");
 			
-			start = System.nanoTime();
-			Lists.selectionSortIterative(list);
-			end = System.nanoTime();
+			start = System.nanoTime();// 记录初始时间
+			Lists.selectionSortIterative(list);// 跑一下List.java里面的selectionSortIterative
+			end = System.nanoTime();// 记录结束时间
 			System.out.println("Selection-Iterative, Time spent: " + (end - start)/1e6 + " ms");
 
 			System.out.println("");

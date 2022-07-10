@@ -19,17 +19,17 @@ public class Lists {
 		}
 		
 		T min = list.get(0);
-		for(int j = 0; j< list.size(); j++) {
+		for(int j = 0; j< list.size(); j++) { //找最小值
 			T temp = list.get(j);
 			if(temp.compareTo(min) < 0) {
 				min = temp;
 			}
 		}
 
-		list.remove(min);
-		list.add(0, min);
+		list.remove(min);//删除最小值
+		list.add(0, min);//把找到的最小值放在第一位
 		
-		Lists.selectionSortRecursive(list.subList(1, list.size()));
+		Lists.selectionSortRecursive(list.subList(1, list.size())); //用subList来把剩下的list重新找最小值
 	}
 	
 	public static <T extends Comparable <? super T>> void selectionSortIterative(List <T> list){
