@@ -18,4 +18,8 @@ public class GraduateStudent extends Student{
 		// TODO Auto-generated method stub
 		return this.Supervisor;
 	}
+	
+	public String toString() {
+		return String.format("Graduate Student\nName: %s\nDOB: %s\nStudent Number: %s\nThesis Supervisor: %s\n", this.Name, this.Date, this.Number, this.Supervisor);
+	}
 }
