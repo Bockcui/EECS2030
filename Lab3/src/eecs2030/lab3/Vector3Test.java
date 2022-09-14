@@ -73,5 +73,16 @@ public class Vector3Test {
 		assertTrue(error, vector3.compareTo(vector1) > 0);
 		assertTrue(error, vector2.compareTo(vector2) == 0);
 	}
+	
+	@Test
+    public void testVector1() {
+		double v1 [] = {1.0, 2.0, 3.0};
+        Vector3 v3 = new Vector3 (v1);
+        System.out.println(v3.getElement(0)+" " + v3.getElement(1)+" " + v3.getElement(2));
+
+        v1[0] = 100;
+
+        System.out.println(v3.getElement(0)+" " + v3.getElement(1)+" " + v3.getElement(2));
+    }
 
 }
