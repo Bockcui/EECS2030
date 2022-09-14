@@ -47,6 +47,16 @@ public class Vector3 implements Comparable <Vector3>{
 			
 			//Create array holding references to immutable fields
 			this.vector = new double[] {this.x, this.y, this.z};
+			
+			/*
+			this.x = 0;
+			this.y = 0;
+			this.z = 0;
+			this.vector = new double[3];
+			for(int i =0; i< v.length; i++) {
+				this.vector[i] = v[i];
+			}*/
+			
 		}
 		else
 		{
